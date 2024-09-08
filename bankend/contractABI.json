@@ -1,0 +1,75 @@
+[
+    {
+      "inputs": [
+        {
+          "internalType": "struct LayerZeroMessageValidator.CrossChainCall[]",
+          "name": "calls",
+          "type": "tuple[]",
+          "components": [
+            {
+              "internalType": "uint32",
+              "name": "dstEid",
+              "type": "uint32"
+            },
+            {
+              "internalType": "address",
+              "name": "target",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "calldata_",
+              "type": "bytes"
+            },
+            { "internalType": "bytes", "name": "option", "type": "bytes" },
+            {
+              "internalType": "struct MessagingFee",
+              "name": "fee",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "nativeFee",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "lzTokenFee",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "name": "send"
+    },
+    {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "target",
+            "type": "address",
+            "indexed": true
+          },
+          {
+            "internalType": "bytes32",
+            "name": "calldataHash",
+            "type": "bytes32",
+            "indexed": false
+          },
+          {
+            "internalType": "bytes",
+            "name": "calldata_",
+            "type": "bytes",
+            "indexed": false
+          }
+        ],
+        "type": "event",
+        "name": "ApproveOp",
+        "anonymous": false
+      }
+  ]
+  
